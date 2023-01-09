@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --MainColor: #1a1a1d;
+    --Main2Color: #4E4E50;
+    --ElementsColor: #6F2232;
+    --ElementColors: #950740;
+    --ElementsColors: #C3073F;
+}
+
+
+body {
+    color: var(--Main2Color);
+    background-color: #111;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.crud {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header .Title,
+.header .Desc {
+    text-align: center;
+    padding: 10px;
+    text-transform: capitalize;
+    color: var(--ElementsColors);
+}
+
+.header .Desc {
+    color: white;
+}
+
+input {
+    width: 100%;
+    background-color: var(--MainColor);
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    height: 25px;
+    padding: 5px;
+    margin: 5px 0px;
+    transition: 0.2s all;
+    color: white;
+}
+
+input:focus {
+    background-color: #000;
+    transform: scaleX(1.1);
+}
+
+.product-price input {
+    width: 20%;
+}
+
+
+.product-price #total {
+    width: 20%;
+}
+
+#total {
+    box-sizing: border-box;
+    background-color: var(--ElementColors);
+    color: white;
+    border-radius: 4px;
+    padding: 5px;
+    margin-top: 0px;
+}
+
+#total::before {
+    content: "Total: ";
+}
+
+#submit,
+.Search,
+.btn1 {
+    width: 100%;
+    background-color: var(--ElementsColors);
+    border-radius: 9px;
+    border: none;
+    outline: none;
+    height: 25px;
+    padding: 5px;
+    margin: 5px 0px;
+    transition: 0.2s all;
+    color: white;
+    cursor: pointer;
+}
+
+.Search {
+    width: 45%;
+    height: 30px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.Search:hover {
+    background-color: #8d0f34;
+}
+
+#submit:hover {
+    background-color: #8d0f34;
+}
+
+table {
+    color: white;
+}
+tr {
+    width: 100%;
+}
+th {
+    width: 5%;
+}
+
+tbody {
+    text-align: center;
+}
+
+tbody tr td {
+    padding: 10px;
+}
+
+.btn {
+    width: 70%;
+    background-color: var(--ElementsColors);
+    border-radius: 9px;
+    border: none;
+    outline: none;
+    height: 25px;
+    padding: 5px;
+    margin: 5px 0px;
+    transition: 0.2s all;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+@media (max-width: 375px) {
+    table tr th {
+        font-size: 8px;
+    }
+    #total {
+        font-size: 9px;
+        padding: 2px;
+    }
+    #total::before {
+        content: "Total:";
+        font-size: 9px;
+        padding: 1px;
+    }
+    .btn {
+        font-size: 5px;
+        padding: px;
+        height: 15px;
+        width: fit-content;
+    }
+    .crud {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
